@@ -3,7 +3,7 @@
   <br>
   从互联网的各处，捞起与 AI、开源与计算机有关的好东西。
   <br>
-  每 3 天捞一次，每周三汇总一期。
+  每 3 天捞一次，每月 29 号汇总一期。
   <br><br>
   <a href="https://github.com/gu-reni/ocean-needle/stargazers"><img src="https://img.shields.io/github/stars/gu-reni/ocean-needle.svg?style=popout-square" alt="GitHub stars"></a>
   <a href="https://github.com/gu-reni/ocean-needle/issues"><img src="https://img.shields.io/github/issues/gu-reni/ocean-needle.svg?style=popout-square" alt="GitHub issues"></a>
@@ -14,7 +14,7 @@
 大海捞针持续从 **GitHub、小黑盒、B站、贴吧及各类信息网站** 搜集与 **AI Skill、大模型、Agent、开源项目、计算机** 有关的内容与软件。
 
 - **每 3 天**捞取一次，捞到的东西不与之前重复
-- **每周三**汇总一期，按类别编排
+- **每月 29 号**汇总一期，按类别编排
 - 报告同时提供 **Markdown 原件** 与 **可直接阅读的网页版**
 
 ## 内容
