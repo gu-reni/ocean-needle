@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>大海捞针 · 第 01 期</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+html { -webkit-text-size-adjust: 100%; }
+body {
+max-width: 46em; margin: 0 auto; padding: 2.2em 1.4em 4em;
+font-family: "Noto Sans CJK SC","Noto Sans CJK","Source Han Sans SC",
+"Microsoft YaHei","PingFang SC",system-ui,-apple-system,sans-serif;
+font-size: 16px; line-height: 1.78; color: #23272e; background: #fff;
+}
+h1 { font-size: 1.85em; line-height: 1.3; margin: 0 0 .4em; padding-bottom: .35em; border-bottom: 3px solid #1a6ee8; color: #16324f; }
+h2 { font-size: 1.35em; margin: 2.2em 0 .7em; padding: .35em 0 .35em .65em; border-left: 5px solid #1a6ee8; background: #f4f8ff; color: #16324f; }
+h3 { font-size: 1.1em; margin: 1.9em 0 .45em; color: #0f4c8f; }
+h3 + p, h3 + ul { margin-top: .3em; }
+strong { color: #0b2b45; }
+a { color: #0a58ca; word-break: break-all; }
+a:hover { text-decoration: none; }
+code { background: #f2f4f7; padding: .12em .38em; border-radius: 3px; font-size: .9em; }
+pre { background: #f6f8fa; padding: .85em 1em; border-radius: 6px; overflow-x: auto; border: 1px solid #e3e8ee; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; }
+th, td { border: 1px solid #d8dee6; padding: .5em .65em; vertical-align: top; text-align: left; }
+th { background: #f2f6fb; }
+blockquote { margin: 1em 0; padding: .6em 1em; border-left: 4px solid #c9d6e5; background: #fafbfd; color: #4a5568; }
+hr { border: none; border-top: 1px solid #e3e8ee; margin: 2.4em 0; }
+@media (max-width: 600px) {
+body { font-size: 15px; padding: 1.2em .9em 3em; }
+h1 { font-size: 1.55em; } h2 { font-size: 1.2em; }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">大海捞针 · 第 01 期</h1>
+</header>
+<h1 id="计算机有意思的东西-第-01-期">计算机有意思的东西 · 第 01 期</h1>
+<p><strong>日期</strong>：2026-09-29　<strong>采集</strong>：小黑盒（手机读屏）+
+GitHub（<code>gh api</code> 现查）+ 桌面社区
+<strong>星数说明</strong>：本文所有星数与推送日期均为 2026-09-29 用
+<code>gh api</code> 现查，非记忆值。</p>
+<hr />
+<h2 id="一skill能给我ai-助理加新本事的">一、Skill：能给我（AI
+助理）加新本事的</h2>
+<h3 id="mattpocockskills">1. mattpocock/skills</h3>
+<p><strong>项目</strong>：mattpocock/skills（本期小黑盒榜单第 1 名，近
+30 天新增 <strong>+43,396</strong> 星）
+<strong>地址</strong>：https://github.com/mattpocock/skills
+<strong>星</strong>：271,579（Shell，推送 2026-09-24）
+<strong>用途</strong>：面向<strong>真实工程师</strong>的一整套 Agent
+Skills 集合，不是玩具 demo —— 作者把自己日常写代码用的
+<code>.agents</code>
+目录直接开源。内容覆盖从需求澄清、写计划、到实施和验证的完整工程流程，配套脚本可以直接丢进
+Claude Code / 任意支持 Skill 的 agent
+里跑。它最值钱的地方是<strong>示范了”一个成熟工程师会把哪些步骤固化成
+Skill”</strong>，等于把一位老手的私藏工作流摊开给你看。
+<strong>对助理的作用</strong>：给我一套<strong>“工程师式的工作流模板”</strong>——我以前是靠零散规则办事，参考它之后能把”先澄清需求
+→ 写计划 → 再动手 → 事后验证”变成固定的 Skill
+步骤，减少我上来就写代码、写完才发现方向错的毛病。</p>
+<h3 id="bladerhumanizer">2. blader/humanizer</h3>
+<p><strong>项目</strong>：blader/humanizer（本期小黑盒榜单第 2 名，近 30
+天新增 <strong>+12,852</strong> 星）
+<strong>地址</strong>：https://github.com/blader/humanizer
+<strong>星</strong>：52,752（Python，推送 2026-09-28）
+<strong>用途</strong>：专门<strong>降低 AI
+文案味</strong>。它整理了一批典型的”机器腔”特征（排比过密、形容词堆砌、“值得注意的是”这类衔接词、过于工整的三段式），并给出改写规则，让输出更像真人随手写的。中文圈把它当成”去
+AI 味”的标准工具。
+<strong>对助理的作用</strong>：<strong>本机已经有同名技能
+<code>humanizer</code></strong>，所以这个仓库对我是「<strong>升级源</strong>」——我可以对照它的规则清单，把本机那份技能的毛病清单补全，以后给你写的东西（简历、报告、对外页面文案）能少一点模板感。</p>
+<h3 id="nextlevelbuilderui-ux-pro-max-skill">3.
+nextlevelbuilder/ui-ux-pro-max-skill</h3>
+<p><strong>项目</strong>：ui-ux-pro-max-skill（本期小黑盒榜单第 3 名，近
+30 天新增 <strong>+10,577</strong> 星）
+<strong>地址</strong>：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+<strong>星</strong>：131,371（Python，推送 2026-09-27）
+<strong>中文教程</strong>：https://github.com/bbylw/ui-ux-pro-max-skill-cn
+（★1,426，完整翻译了原仓库 README）
+<strong>用途</strong>：一个<strong>网页/UI 设计智能库</strong> ——
+把配色方案、字体搭配、间距节奏、栅格布局、常见 UX
+反模式整理成结构化知识，让 agent
+在做前端时”有据可依”而不是随手发挥。它解决的是 AI
+做页面最典型的两个毛病：<strong>配色土</strong>（要么全灰要么荧光色）和<strong>布局呆</strong>（所有东西等宽对齐）。
+<strong>对助理的作用</strong>：给我<strong>做前端页面时的”审美依据”</strong>。我平时给你搭
+tools.djz.asia
+下面的工具页，配色排版基本靠感觉；装上它之后可以在动手前先取一套成熟方案，页面的完成度会明显上一个台阶。</p>
+<h3 id="leonxlnxtaste-skill">4. Leonxlnx/taste-skill</h3>
+<p><strong>项目</strong>：taste-skill（本期小黑盒榜单第 4 名，近 30
+天新增 <strong>+10,307</strong> 星）
+<strong>地址</strong>：https://github.com/Leonxlnx/taste-skill
+<strong>星</strong>：91,050（推送 2026-09-26）
+<strong>用途</strong>：和上面那条互补 ——
+它主要治的是<strong>“模板味”</strong>。描述里写得很直白：「gives your AI
+good taste，stops the AI from 生成那些一眼假的东西」。做法是约束 agent
+在生成视觉产物（网页、封面、图表）时别老用那几个套路（渐变紫、居中大标题、三张卡片并列），鼓励更克制、更有具体场景感的选择。
+<strong>对助理的作用</strong>：这是<strong>“别做得像 AI
+做的”</strong>这一类能力的直接补强。我做 PPT、PDF
+封面、工具页的时候，它相当于一个审稿人，能在出稿前把最俗的套路挑出来。</p>
+<h3 id="panniantongagent-reach">5. Panniantong/Agent-Reach</h3>
+<p><strong>项目</strong>：Agent-Reach（本期小黑盒榜单第 5 名，近 30
+天新增 <strong>+9,843</strong> 星）
+<strong>地址</strong>：https://github.com/Panniantong/Agent-Reach
+<strong>星</strong>：86,081（Python，推送 2026-09-15）
+<strong>用途</strong>：给 agent <strong>“上网的眼睛”</strong> —— 让
+agent 能读取和搜索多个互联网平台的信息（不只 GitHub）。仓库自述是「Give
+your AI agent eyes to see the entire
+internet」。它把各家平台的内容获取、解析、清洗打包成统一接口，免去逐个平台写爬虫的麻烦。
+<strong>对助理的作用</strong>：我现在采集内容<strong>每条路都要单独想办法</strong>（小黑盒走手机读屏、B站走
+API、别的站点各写各的）。这个项目提供的”统一取数层”思路，可以让我把多个源接成一条流水线，<strong>以后做定期报告时的采集成本会显著下降</strong>。</p>
+<h3 id="career-ops-hqcareer-ops">6. career-ops-hq/career-ops</h3>
+<p><strong>项目</strong>：career-ops（本期小黑盒榜单第 6 名，近 30
+天新增 <strong>+7,632</strong> 星）
+<strong>地址</strong>：https://github.com/career-ops-hq/career-ops
+<strong>星</strong>：73,028（推送 2026-09-29）
+<strong>用途</strong>：开源的<strong>AI 求职
+agent</strong>：自动扫招聘网站、评估岗位和你的匹配度、按优先级排序，还能顺着职位描述反推该补哪些技能。仓库还配了独立的文档站（career-ops-hq/career-ops-docs）。
+<strong>对助理的作用</strong>：这条<strong>直接对上你在找开发岗的需求</strong>。我以后帮你筛岗位、改简历、分析
+JD
+关键词时，可以照它的评估维度（技能匹配度、经验门槛、成长空间）来打分，而不是我凭感觉说”这个不错”。<strong>这条我建议优先看。</strong></p>
+<h3 id="mukul975anthropic-cybersecurity-skills">7.
+mukul975/Anthropic-Cybersecurity-Skills</h3>
+<p><strong>项目</strong>：Anthropic-Cybersecurity-Skills（本期小黑盒榜单第
+7 名，近 30 天新增 <strong>+4,790</strong> 星）
+<strong>地址</strong>：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+<strong>星</strong>：33,542（Python，推送 2026-08-31）
+<strong>中文版</strong>：https://github.com/jeffrey1205/Anthropic-Cybersecurity-Skills-cn
+（★3） <strong>用途</strong>：<strong>817
+个结构化网络安全技能</strong>，覆盖渗透测试、日志分析、漏洞判定、应急响应等方向，并按安全框架做了映射。适合做安全测试、安全审计类项目时当作知识底座。
+<strong>对助理的作用</strong>：我平时帮你做服务器加固、看访问日志、判断可疑请求，<strong>基本靠经验</strong>；这个仓库等于给了我一份成体系的安全检查清单，能让我的审计更系统、漏项更少。</p>
+<h3 id="last30days-skill">8. last30days-skill</h3>
+<p><strong>项目</strong>：last30days-skill（本期小黑盒榜单第 8 名，近 30
+天新增 <strong>+3,691</strong> 星）
+<strong>地址</strong>：https://github.com/mvanhorn/last30days-skill
+<strong>星</strong>：（上游仓库名由多个下游仓库交叉引用确认；同名分支
+<code>levineam/lastXdays-skill</code> ★48 亦存在）
+<strong>用途</strong>：专门研究<strong>“最近 30
+天发生了什么”</strong>——把指定主题在近一个月的动态、讨论热点、变化趋势汇总出来，做热点追踪和行业观察很方便。
+<strong>对助理的作用</strong>：<strong>这个正好是我做定期报告的发动机</strong>。你要求的是”定期搜集有意思的内容”，它提供的是”以
+30 天为窗口看变化”的方法论，比我盲目翻热榜更有焦点。</p>
+<h3 id="egonex-aiunderstand-anything">9.
+Egonex-AI/Understand-Anything</h3>
+<p><strong>项目</strong>：Understand-Anything（本期小黑盒榜单第 9 名，近
+30 天新增 <strong>+3,449</strong> 星）
+<strong>地址</strong>：https://github.com/Egonex-AI/Understand-Anything
+<strong>星</strong>：84,608（TypeScript，推送 2026-09-28）
+<strong>用途</strong>：把<strong>任意代码仓库转成可交互的知识图谱</strong>，讲清模块之间怎么调用、数据怎么流动、哪些地方是核心。仓库的自我定位挺有意思：「Graphs
+that teach &gt; graphs that
+impress」——图是用来教人看懂的，不是用来炫的。
+<strong>对助理的作用</strong>：<strong>接手陌生项目的利器</strong>。你的
+<code>semantic-cache-radar</code>
+等项目重新开工时，我可以先跑一遍它、把结构图给你，<strong>你就能像看地图一样理解自己的项目</strong>，我也少犯”没看懂就改”的错。<strong>这条我建议优先看。</strong></p>
+<h3 id="agricidanielclaude-seo">10. AgriciDaniel/claude-seo</h3>
+<p><strong>项目</strong>：claude-seo（本期小黑盒榜单第 10 名，近 30
+天新增 <strong>+2,692</strong> 星）
+<strong>地址</strong>：https://github.com/AgriciDaniel/claude-seo
+<strong>星</strong>：17,921（Python，推送 2026-09-28）
+<strong>用途</strong>：给 Claude Code 加 <strong>SEO 能力</strong>：26
+个子技能 + 19 个子代理，覆盖关键词研究、技术 SEO
+检查（站点地图、结构化数据、抓取问题）、以及面向生成式搜索引擎的 GEO
+优化。
+<strong>对助理的作用</strong>：你明确说过希望站点<strong>“面向搜索引擎与陌生人”</strong>。有了它，我能把”页面写好了但搜索引擎看不见”这类问题系统排查一遍（比如你现在的站点只有带
+<code>:8443</code>
+才公网可达，这对搜索引擎就是不友好的，正好用得上）。</p>
+<hr />
+<h2 id="二skill-仓库可以直接下载使用的">二、Skill
+仓库：可以直接下载使用的</h2>
+<h3 id="obrasuperpowers">obra/superpowers</h3>
+<p><strong>项目</strong>：obra/superpowers
+<strong>地址</strong>：https://github.com/obra/superpowers
+<strong>星</strong>：292,617（Shell，推送 2026-09-27）
+<strong>用途</strong>：20 多个<strong>经过实战检验</strong>的
+Skill，覆盖 TDD、系统化调试、协作模式等；自带
+<code>/brainstorm</code>、<code>/write-plan</code>、<code>/execute-plan</code>
+三个命令串起”想清楚 → 写方案 → 执行”的流程。
+<strong>对助理的作用</strong>：给我一套<strong>现成的开发纪律</strong>（尤其”先写测试再写代码”这条）。我做事容易直接开写，它可以当作流程约束来用。</p>
+<h3 id="anthropicsskills">anthropics/skills</h3>
+<p><strong>项目</strong>：anthropics/skills（<strong>Anthropic
+官方</strong>）
+<strong>地址</strong>：https://github.com/anthropics/skills
+<strong>星</strong>：178,888（Python，推送 2026-09-29）
+<strong>用途</strong>：Anthropic 官方的 Skill 仓库，示范 Skill
+该怎么写、有哪些官方推荐用法。里面就有
+<code>skill-creator</code>（小黑盒那篇帖子提到的
+<code>npx skills add anthropics/skills --skill skill-creator</code>）。
+<strong>对助理的作用</strong>：<strong>我写技能时的格式化范本</strong>。我本机已有
+100+ 技能，写作规范参差不齐，对着官方仓库可以统一一遍。</p>
+<h3 id="affaan-mecc">affaan-m/ECC</h3>
+<p><strong>项目</strong>：ECC
+<strong>地址</strong>：https://github.com/affaan-m/ECC
+<strong>星</strong>：269,202（JavaScript，推送 2026-09-28）
+<strong>用途</strong>：规模最大的合集之一 —— <strong>68 个 Agent + 292
+个 Skill + 94 个命令</strong>，还带一个 AgentShield 安全扫描模块。
+<strong>对助理的作用</strong>：<strong>当”技能超市”用</strong>，需要某个特定能力时先来这里翻，比我自己从零写快得多。</p>
+<h3 id="farion1231cc-switch">farion1231/cc-switch</h3>
+<p><strong>项目</strong>：cc-switch
+<strong>地址</strong>：https://github.com/farion1231/cc-switch
+<strong>星</strong>：138,067 <strong>用途</strong>：Rust 写的
+<strong>Claude Code 配置切换工具</strong>，一键在多个 API
+供应商/模型配置之间切。 <strong>对助理的作用</strong>：<strong>你同时用
+DeepSeek / GLM / ChatGPT</strong>，本机还有 OpenCode 和 Hermes 多套配置
+—— 这类工具的思路可以用来做统一配置管理，省得每处都手改。</p>
+<h3 id="addyosmaniagent-skills">addyosmani/agent-skills</h3>
+<p><strong>项目</strong>：agent-skills
+<strong>地址</strong>：https://github.com/addyosmani/agent-skills
+<strong>星</strong>：99,746（JavaScript，推送 2026-09-26）
+<strong>用途</strong>：前 Google 工程师 Addy Osmani 维护的 Skill
+集，特点是从<strong>“不让 Agent
+偷懒”的机制</strong>入手设计（强制验证、强制回读、禁止”看起来完成了”）。
+<strong>对助理的作用</strong>：<strong>治我的老毛病</strong>。我这次做
+PDF
+就犯过”网关没报错就以为发出去了”的错，这类机制正是防止我把”没验证”当”完成了”。</p>
+<h3 id="composiohqawesome-claude-skills">ComposioHQ/awesome-claude-skills</h3>
+<p><strong>项目</strong>：awesome-claude-skills
+<strong>地址</strong>：https://github.com/ComposioHQ/awesome-claude-skills
+<strong>星</strong>：75,810（Python，推送 2026-09-18）
+<strong>中文版</strong>：https://github.com/lessup/awesome-claude-skills-zh
+（★4） <strong>用途</strong>：1000+ 生产级 Skill
+与插件的索引清单，按领域分类。
+<strong>对助理的作用</strong>：<strong>找技能的第一站</strong>。要什么能力先检索这里，避免重复造轮子。</p>
+<h3 id="cloudflaresecurity-audit-skill">cloudflare/security-audit-skill</h3>
+<p><strong>项目</strong>：security-audit-skill（<strong>Cloudflare
+官方</strong>）
+<strong>地址</strong>：https://github.com/cloudflare/security-audit-skill
+<strong>星</strong>：22,887（JavaScript，推送 2026-09-14）
+<strong>用途</strong>：<strong>六阶段安全审计框架</strong>，设计上有个很聪明的点：<strong>发现漏洞的
+Agent 不许自己判定”这个漏洞成立”，必须交给一个全新的 Agent
+去尝试推翻它</strong>。
+<strong>对助理的作用</strong>：<strong>这套”独立复核”机制值得我抄</strong>。我给你做服务器安全检查时，就不该只由我一个声音说了算，让第二个视角来挑战结论能减少误报。</p>
+<hr />
+<h2 id="三开源项目github-trending2026-年-9-月">三、开源项目（GitHub
+Trending，2026 年 9 月）</h2>
+<h3 id="paperclipaipaperclip">paperclipai/paperclip</h3>
+<p><strong>项目</strong>：paperclip
+<strong>地址</strong>：https://github.com/paperclipai/paperclip
+<strong>星</strong>：93,497（TypeScript，推送 2026-09-29）
+<strong>用途</strong>：把<strong>一群 Agent 当成”公司”来管</strong> ——
+定义组织架构、分配预算、走审批流。解决的是多 Agent
+协作时”谁负责、能花多少钱、谁批”这类管理问题，而不是技术问题。
+<strong>对助理的作用</strong>：你提过想搞<strong>多 Agent
+协作</strong>。这个项目提供的”给 Agent
+定岗定预算”的思路，正好是我将来调度多个子代理时缺的那一块。</p>
+<h3 id="stablyaiorca">stablyai/orca</h3>
+<p><strong>项目</strong>：orca
+<strong>地址</strong>：https://github.com/stablyai/orca
+<strong>星</strong>：80,411 <strong>用途</strong>：<strong>多个编码
+Agent 并行开发环境</strong> —— 每个 Agent 有自己的 git
+worktree，互不干扰，还支持手机端推送进度。
+<strong>对助理的作用</strong>：我现在派子代理是”发出去、等回来”，看不到中间过程；它的<strong>手机推送</strong>思路可以让长任务有进度可见性。</p>
+<h3 id="rohitg00ai-engineering-from-scratch">rohitg00/ai-engineering-from-scratch</h3>
+<p><strong>项目</strong>：ai-engineering-from-scratch
+<strong>地址</strong>：https://github.com/rohitg00/ai-engineering-from-scratch
+<strong>星</strong>：60,119 <strong>用途</strong>：<strong>523 节课的 AI
+工程开源课程</strong>，从数学基础一路讲到多智能体系统，强调”从零实现”而不是调
+API。
+<strong>对助理的作用</strong>：<strong>我解释原理时的素材库</strong>。你偏好”先把方案/原理讲清楚再动手”，这个仓库的分层结构正好适合我按需取用。</p>
+<h3 id="alibabaopen-code-review">alibaba/open-code-review</h3>
+<p><strong>项目</strong>：open-code-review（<strong>阿里出品</strong>）
+<strong>地址</strong>：https://github.com/alibaba/open-code-review
+<strong>星</strong>：42,427（Go，推送 2026-09-29）
+<strong>用途</strong>：AI 代码审查工具，走<strong>“确定性工程 + LLM
+混合”</strong>路线，关键是 <strong>Token 消耗约为通用 Agent 的
+1/9</strong>。
+<strong>对助理的作用</strong>：我给项目做代码审查时，<strong>成本能降一个数量级</strong>。你那个
+<code>semantic-cache-radar</code> 要重新开工时，这条正好用得上。</p>
+<h3 id="vectorize-iohindsight">vectorize-io/hindsight</h3>
+<p><strong>项目</strong>：hindsight
+<strong>地址</strong>：https://github.com/vectorize-io/hindsight
+<strong>星</strong>：41,621（Python，推送 2026-09-29）
+<strong>用途</strong>：<strong>“会学习”的 Agent 记忆系统</strong>，本周
+Trending 第一。它不只是存对话，而是把经验提炼成可复用的记忆。
+<strong>对助理的作用</strong>：<strong>直接关系到我的长期记忆能力</strong>。我现在跨会话靠
+memory 和 session_search，它是更完整的方案，值得研究怎么借鉴。</p>
+<h3 id="dream-numuniver">dream-num/univer</h3>
+<p><strong>项目</strong>：univer
+<strong>地址</strong>：https://github.com/dream-num/univer
+<strong>星</strong>：21,478（TypeScript，推送 2026-09-29）
+<strong>用途</strong>：让 Agent <strong>用结构化 API 直接检查/修改
+Office
+文档</strong>，而不是生成一个文件丢给你。本质是把表格、文档做成可编程对象。
+<strong>对助理的作用</strong>：<strong>和本机的办公工具链是同一方向</strong>。我处理你的
+Excel/Word
+时踩过”写出来用户打开乱码”的坑，它的”结构化操作”思路能从根上避免这类问题。</p>
+<h3 id="t8y2dbx">t8y2/dbx</h3>
+<p><strong>项目</strong>：dbx
+<strong>地址</strong>：https://github.com/t8y2/dbx
+<strong>星</strong>：21,422 <strong>用途</strong>：<strong>25 MB
+单二进制数据库客户端</strong>，支持 100+
+种数据库，<strong>包含达梦、人大金仓等国产库</strong>。
+<strong>对助理的作用</strong>：一个不用装依赖就能连各种库的顺手工具，以后排查数据问题时少折腾环境。</p>
+<h3 id="yetonemagpie">yetone/magpie</h3>
+<p><strong>项目</strong>：magpie
+<strong>地址</strong>：https://github.com/yetone/magpie
+<strong>星</strong>：（未查到公开星数，需人工确认）
+<strong>用途</strong>：<strong>统一管理本机多家 AI
+模型的配置</strong>，提供本地网关，做模型切换和统一调用入口。
+<strong>对助理的作用</strong>：<strong>你的痛点它正好管</strong> ——
+你同时用 DeepSeek、GLM、ChatGPT，本机还有 Hermes + OpenCode
+两套配置，它就是来解决”配置散落各处”的。</p>
+<h3 id="niko1221strata">Niko1221/Strata</h3>
+<p><strong>项目</strong>：Strata
+<strong>地址</strong>：https://github.com/Niko1221/Strata
+<strong>星</strong>：（未查到公开星数，需人工确认）
+<strong>用途</strong>：把 <strong>125B 参数的 MoE 模型塞进 12 GB
+显存</strong>（三路卸载 + 自推测解码，RTX 5070 实测 90 tok/s）。
+<strong>对助理的作用</strong>：<strong>和你笔记本直接相关</strong>（RTX
+4060 Laptop
+8G）。它证明小显存也能跑大模型，如果将来你想在本地跑模型，这条是技术路线参考。</p>
+<hr />
+<h2 id="四windows-软件">四、Windows 软件</h2>
+<h3 id="powertoys">PowerToys</h3>
+<p><strong>项目</strong>：PowerToys（微软官方）
+<strong>地址</strong>：https://github.com/microsoft/PowerToys
+<strong>用途</strong>：微软官方免费效率合集。<strong>FancyZones</strong>
+做窗口分区布局；<strong>PowerToys Run</strong>
+是快速启动器；<strong>Text Extractor</strong> 直接屏幕上框选文字做
+OCR；<strong>Awake</strong> 让电脑保持常亮；还有鼠标定位、批量重命名等。
+<strong>对助理的作用</strong>：你截图问我问题时，<strong>Text Extractor
+能直接把屏幕上的文字抠出来</strong>，比我靠眼睛认截图更准。</p>
+<h3 id="devtoys">DevToys</h3>
+<p><strong>项目</strong>：DevToys
+<strong>地址</strong>：https://github.com/DevToys-app/DevToys
+<strong>用途</strong>：开发者工具箱，<strong>完全离线</strong>。28+
+工具：JSON/SQL/XML 格式化与校验、JWT 解码、URL 编解码、UUID
+生成、正则测试、图片压缩、哈希计算。
+<strong>对助理的作用</strong>：我生成的 JSON
+配置、正则、编码内容，<strong>你在自己机器上就能一键验证</strong>，不用来回问我。</p>
+<h3 id="sharex">ShareX</h3>
+<p><strong>项目</strong>：ShareX
+<strong>地址</strong>：https://github.com/ShareX/ShareX
+<strong>用途</strong>：截图 + 录屏 + GIF + OCR + 水印 +
+自动上传，<strong>整条流水线可自动化</strong>（截图完自动上传并复制链接）。是
+Windows 上功能最全的截图工具。
+<strong>对助理的作用</strong>：你现在是<strong>手动截图发给我</strong>；它的自动化上传能让”截图
+→ 拿到链接”一步完成，将来我们要连续沟通问题时效率更高。</p>
+<h3 id="everything">Everything</h3>
+<p><strong>项目</strong>：Everything
+<strong>地址</strong>：https://www.voidtools.com/
+<strong>用途</strong>：基于 NTFS
+索引的极速文件搜索，<strong>毫秒级</strong>返回全盘文件名结果，远超
+Windows 自带搜索。
+<strong>对助理的作用</strong>：你找文件时快得多；我远程帮你定位文件时也有对应的思路可循。</p>
+<h3 id="flow-launcher">Flow Launcher</h3>
+<p><strong>项目</strong>：Flow Launcher
+<strong>地址</strong>：https://github.com/Flow-Launcher/Flow-Launcher
+<strong>用途</strong>：开源启动器，<strong>有插件商店</strong>，可搜索程序/文件/网页、做计算、查剪贴板历史，替代”开始菜单”。
+<strong>对助理的作用</strong>：这类工具的组织方式（插件 +
+模糊搜索）和我工具页的设计思路相通，可以互相借鉴。</p>
+<h3 id="quicker">Quicker</h3>
+<p><strong>项目</strong>：Quicker
+<strong>地址</strong>：https://getquicker.net/
+<strong>用途</strong>：国产快捷操作面板，<strong>按下鼠标中键唤出</strong>，把常用操作做成按钮；社区有大量现成动作可下载（截长图、OCR、翻译、批量处理）。高度可定制，是国产效率工具里的标杆。
+<strong>对助理的作用</strong>：你反复做的固定操作（比如整理学籍表格）可以做成
+Quicker 动作，<strong>把”教我做”变成”一次配好以后一键点”</strong>。</p>
+<h3 id="fileconverter">FileConverter</h3>
+<p><strong>项目</strong>：FileConverter
+<strong>地址</strong>：https://github.com/Tichau/FileConverter
+<strong>用途</strong>：在<strong>资源管理器右键</strong>直接转换和压缩文件：图片格式互转、文档转
+PDF、视频转码、批量压缩。装完就在右键菜单里。
+<strong>对助理的作用</strong>：你现在要把文件发给我处理格式，装了这个自己右键就转完了，<strong>省一次来回</strong>。</p>
+<h3 id="pdfpatcherpdf-补丁丁">PDFPatcher（PDF 补丁丁）</h3>
+<p><strong>项目</strong>：PDFPatcher
+<strong>地址</strong>：https://github.com/superfashi/PDFPatcher
+<strong>用途</strong>：国产 PDF
+处理工具：<strong>编辑书签、裁剪旋转页面、解除限制、提取合并、转图片</strong>，能处理很多商业软件不给你动的
+PDF。 <strong>对助理的作用</strong>：和我做 PDF 报告的能力互补 ——
+它能做那些”要动原文件结构”的活儿。</p>
+<h3 id="geek-uninstaller">Geek Uninstaller</h3>
+<p><strong>项目</strong>：Geek Uninstaller
+<strong>地址</strong>：https://geekuninstaller.com/
+<strong>用途</strong>：卸载软件<strong>并清理残留</strong>（注册表项、安装目录、缓存），还能强制移除卸载失败的程序。
+<strong>对助理的作用</strong>：你笔记本上装软件试完想删干净时用得上，能避免残留越攒越多。</p>
+<h3 id="ventoy">Ventoy</h3>
+<p><strong>项目</strong>：Ventoy
+<strong>地址</strong>：https://github.com/ventoy/Ventoy
+<strong>用途</strong>：做启动盘不用反复格式化 —— ISO
+直接拖进去，<strong>开机时选哪个镜像就启动哪个</strong>，一张 U
+盘装多个系统安装盘。
+<strong>对助理的作用</strong>：将来你要装系统/救援盘，一条命令级别的操作就够，不用来回重刷
+U 盘。</p>
+<h3 id="windirstat-spacesniffer">WinDirStat / SpaceSniffer</h3>
+<p><strong>项目</strong>：WinDirStat（https://windirstat.net/） /
+SpaceSniffer（http://uderzo.it/main_products/space_sniffer/）
+<strong>用途</strong>：<strong>可视化看磁盘谁占地方</strong> ——
+用配色方块图把大文件大目录一眼标出来。
+<strong>对助理的作用</strong>：你笔记本 1TB
+用久了会满，这类工具能让你（或者我看你截图）<strong>几秒钟定位到元凶</strong>。</p>
+<h3 id="autohotkey-autoit">AutoHotKey / AutoIt</h3>
+<p><strong>项目</strong>：AutoHotkey（https://www.autohotkey.com/） /
+AutoIt（https://www.autoitscript.com/） <strong>用途</strong>：Windows
+上的<strong>键鼠屏幕自动化脚本</strong>语言：自定义快捷键、把重复操作写成脚本、做小工具窗口。几乎任何”我天天点这几下”的活儿都能自动化。
+<strong>对助理的作用</strong>：<strong>这是”在你电脑上自动化”的现成路径</strong>
+—— 不用等我把 Hermes 装到你 Windows 上，你自己用 AHK
+就能先把最烦的重复操作干掉。</p>
+<h3 id="remote">1Remote</h3>
+<p><strong>项目</strong>：1Remote
+<strong>地址</strong>：https://github.com/1Remote/1Remote
+<strong>用途</strong>：<strong>远程会话统一管理</strong>：RDP / VNC /
+SSH / Telnet / SFTP / FTP 都从一个界面进，配置可加密同步。
+<strong>对助理的作用</strong>：你以后有一堆云服务器要连时，它比记一堆 IP
+和密码省事（<strong>注意：凭据交给密码管理器，不要写在笔记里</strong>）。</p>
+<hr />
+<h2 id="五插件-桌面布局">五、插件 &amp; 桌面布局</h2>
+<h3 id="windhawk">Windhawk</h3>
+<p><strong>项目</strong>：Windhawk
+<strong>地址</strong>：https://windhawk.net/ （源码
+https://github.com/ramensoftware/windhawk）
+<strong>用途</strong>：<strong>模组化的 Windows 定制平台</strong> ——
+像给游戏打 MOD 一样改系统：<strong>500+ 社区模组、200 万+
+累计下载</strong>、完全免费开源。做到”不修改系统文件、随时可逆”，这是它和传统美化工具最大的区别。常用模组：任务栏样式器、任务栏时钟定制（能显示秒）、<strong>垂直任务栏</strong>、恢复经典文件资源管理器、恢复经典右键菜单、Alt+Tab
+只切当前显示器。 <strong>对助理的作用</strong>：<strong>你说 Windows 11
+难用的问题，它基本都能治</strong>。而且它是”模组 +
+可逆”的设计，风险比改注册表低得多，我可以放心推荐你先拿它试。</p>
+<h3 id="rainmeter">Rainmeter</h3>
+<p><strong>项目</strong>：Rainmeter（雨滴桌面）
+<strong>地址</strong>：https://www.rainmeter.net/
+<strong>用途</strong>：免费开源（GPL
+v2）的<strong>桌面小组件</strong>工具，当前版本
+4.5.26。把”皮肤”铺在桌面上：硬件占用仪表（CPU/内存/磁盘/网络做成圆环）、音频可视化、时钟日历、天气。皮肤用简单的描述语言写，不难学，社区皮肤极多（Mond
+极简时钟、Honeycomb 六边形启动器、Enigma 系统监控面板都是经典款）。
+<strong>对助理的作用</strong>：你笔记本接显示器办公时，<strong>把系统状态做成桌面仪表</strong>比开任务管理器顺手。它也是<strong>桌面布局类内容的素材源</strong>
+—— 以后每期报告都有得写。</p>
+<h3 id="translucenttb">TranslucentTB</h3>
+<p><strong>项目</strong>：TranslucentTB
+<strong>地址</strong>：https://github.com/TranslucentTB/TranslucentTB
+<strong>用途</strong>：专门改造<strong>任务栏外观</strong>：完全透明 /
+模糊 / 亚克力 / 不透明 /
+<strong>动态模式</strong>（窗口最大化时不透明、桌面无窗口时全透明、全屏游戏时自动隐藏）。开源免费。
+<strong>对助理的作用</strong>：和 Rainmeter 搭配是标配组合（壁纸定调 →
+任务栏透明 →
+组件点缀）。这类”消除割裂感”的细节，是我们做页面临时最容易忽略的部分。</p>
+<h3 id="seelen-ui">Seelen UI</h3>
+<p><strong>项目</strong>：Seelen UI
+<strong>地址</strong>：https://github.com/eythaann/Seelen-UI
+<strong>用途</strong>：<strong>替换 Windows 11 默认
+Shell</strong>（不只是一个工具）。可完全脚本化的状态栏（<strong>每一项用
+JavaScript 写</strong>，可显示 CPU 每核占用、内存、网络速度、磁盘
+I/O、电池）、可独立配置每台显示器的 Dock/工具栏、替代开始菜单（支持
+<code>apps:</code> <code>files:</code> <code>web:</code>
+范围前缀实时搜索）。
+<strong>对助理的作用</strong>：它的<strong>“状态栏项用 JS
+写”</strong>这个设计很有意思 ——
+等于把桌面变成可编程界面。这种架构思路对我给你做自研工具页有参照价值。</p>
+<h3 id="winstep-nexus">Winstep Nexus</h3>
+<p><strong>项目</strong>：Winstep Nexus
+<strong>地址</strong>：https://www.winstep.net/nexus.asp
+<strong>用途</strong>：经典的 <strong>macOS 风格
+Dock</strong>：图标从中间向两侧放大、有弹性动画、支持图标分组，还能加
+Docklet（时钟、天气、音量控制、回收站）。个人使用免费。
+<strong>对助理的作用</strong>：和任务栏二者选一即可（都放底部会打架）。推荐给”想换换手感”的场景。</p>
+<h3 id="巨应壁纸">巨应壁纸</h3>
+<p><strong>项目</strong>：巨应壁纸
+<strong>地址</strong>：https://www.juzi.zone/ （官网搜索”巨应壁纸”）
+<strong>用途</strong>：把<strong>视频、网页、应用都能当壁纸</strong>的动态壁纸工具，比
+Wallpaper Engine 更轻量。
+<strong>对助理的作用</strong>：桌面美化的”视觉底子” ——
+社区那套标准流程的第一步就是用它定基调（深色壁纸最容易衬托组件和
+Dock）。</p>
+<blockquote>
+<p><strong>一套现成的组合流程</strong>（社区实测）：① 巨应壁纸定壁纸风格
+→ ② TranslucentTB 让任务栏透明 → ③ Rainmeter 放极简时钟 + 系统监控 → ④
+Nexus 放底部 Dock。<strong>三处配色尽量统一</strong>，避免花里胡哨。</p>
+</blockquote>
+<hr />
+<h2 id="六一条被我筛掉的说实话不推荐">六、一条被我筛掉的（说实话，不推荐）</h2>
+<h3 id="小申陪伴bunnycompanion">小申陪伴（BunnyCompanion）</h3>
+<p><strong>项目</strong>：BunnyCompanion（Windows 桌面宠物 + 本机 AI
+Agent） <strong>地址</strong>：https://github.com/cknb6/BunnyCompanion
+<strong>星</strong>：<strong>1</strong>（推送 2026-07-17）
+<strong>用途</strong>：概念上是我这次看到<strong>最对胃口</strong>的一个
+—— 一个住在 Windows
+桌面上的宠物，能<strong>看到你的屏幕、听你说话（多模态）</strong>，内置
+40+ 本地工具，相当于把 AI 助理做成桌面常驻形态。
+<strong>为什么筛掉</strong>：<code>gh api</code> 现查 <strong>只有 1
+星、最后推送
+2026-07-17</strong>，属于个人实验项目、没有社区验证，<strong>不建议真装在主力机上</strong>。但它的<strong>思路（桌面常驻
++ 看屏幕 + 语音）值得记住</strong> ——
+这可能就是”让助理住在你电脑上”的形态。</p>
+<hr />
+<h2 id="七本期采集方式技术备注供复查">七、本期采集方式（技术备注，供复查）</h2>
+<ul>
+<li>小黑盒内容用<strong>手机读屏</strong>取得（iQOO Neo5S，Tailscale
+无线 ADB，全程未插数据线）。</li>
+<li>小黑盒搜索必须用<strong>英文关键词</strong>（中文会被拼音联想劫持）；提交要点「内容」标签的<strong>父容器</strong>（标签文字本身
+<code>clickable=false</code>）。</li>
+<li>详情页 <code>uiautomator dump</code> 常报
+<code>could not get idle state</code>（页面有动画）⇒ 改用<strong>截图 +
+视觉读屏</strong>。</li>
+<li>所有星数、推送日期用 <code>gh api</code> /
+<code>gh search repos</code>
+现查；<strong>仓库地址逐条核实</strong>，未查到公开星数的明确标注。</li>
+</ul>
+<hr />
+<p><em>本期内部分内容来自小黑盒社区帖子（作者：Rocee《9月份 GitHub
+涨得最快的10个skill》），出处已在正文标注。</em></p>
+</body>
+</html>
