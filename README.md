@@ -21,6 +21,7 @@
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
+| [第 01 期](/reports/01.md) | | | | |
 
 > 点期号看 Markdown 原件；想直接在浏览器里读，把链接末尾的 `.md` 换成 `.html`。
 
