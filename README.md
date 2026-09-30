@@ -1,6 +1,8 @@
 <p align="center">
   <b>大海捞针</b>
   <br>
+  中文 | <a href="README_en.md">English</a>
+  <br>
   从互联网的各处，捞起真正能用的 AI Skill。
   <br>
   每周三捞一次，每月 29 号汇总一期，一期最多 20 条。
@@ -53,6 +55,7 @@
 
 | 路径 | 说明 |
 |---|---|
+| `README.md` / `README_en.md` | 中文 / English 说明 |
 | `reports/NN.md` | 第 NN 期报告（Markdown 原件） |
 | `reports/NN.html` | 第 NN 期报告（渲染后的网页） |
 | `state/seen.tsv` | 去重台账：已收录条目的唯一键 |
