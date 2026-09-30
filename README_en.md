@@ -1,7 +1,7 @@
 <p align="center">
   <b>Ocean Needle</b>
   <br>
-  <a href="README.md">中文</a> | English
+  <a href="README.md">中文</a> | English | <a href="README_ja.md">日本語</a>
   <br>
   Sifting genuinely useful AI Skills out of the open internet.
   <br>
@@ -26,11 +26,11 @@ It draws on GitHub, dedicated Skill directories, Chinese AI communities and indu
 
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
-| [Issue 01](/reports/01.md) | | | | |
+| [Issue 01](/reports/en/01.md) | | | | |
 
 > Click an issue number for the Markdown source. To read it in a browser, change the `.md` suffix to `.html`.
 >
-> Reports are written in Chinese. Issue 01 is a re-compilation of the original issues 01 and 02, which is why it exceeds the usual entry limit.
+> Issue 01 is a re-compilation of the original issues 01 and 02, which is why it exceeds the usual entry limit.
 
 ## How each issue is organised
 
@@ -57,7 +57,10 @@ Three criteria, all of them required:
 
 | Path | Description |
 |---|---|
-| `reports/NN.md` | Issue NN (Markdown source) |
-| `reports/NN.html` | Issue NN (rendered web page) |
+| `README.md` / `README_en.md` / `README_ja.md` | Chinese / English / Japanese documentation |
+| `reports/NN.md` | Issue NN, Chinese (Markdown source) |
+| `reports/NN.html` | Issue NN, Chinese (rendered web page) |
+| `reports/en/NN.md` | Issue NN, English (Markdown source) |
+| `reports/en/NN.html` | Issue NN, English (rendered web page) |
 | `state/seen.tsv` | Dedupe ledger: unique keys of everything already covered |
 | `scripts/report-header.html` | Stylesheet template used when rendering |

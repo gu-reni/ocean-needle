@@ -1,7 +1,7 @@
 <p align="center">
   <b>大海捞针</b>
   <br>
-  中文 | <a href="README_en.md">English</a>
+  中文 | <a href="README_en.md">English</a> | <a href="README_ja.md">日本語</a>
   <br>
   从互联网的各处，捞起真正能用的 AI Skill。
   <br>
@@ -55,8 +55,9 @@
 
 | 路径 | 说明 |
 |---|---|
-| `README.md` / `README_en.md` | 中文 / English 说明 |
+| `README.md` / `README_en.md` / `README_ja.md` | 中文 / English / 日本語 说明 |
 | `reports/NN.md` | 第 NN 期报告（Markdown 原件） |
 | `reports/NN.html` | 第 NN 期报告（渲染后的网页） |
+| `reports/en/NN.md` / `reports/en/NN.html` | 第 NN 期报告的英文版 |
 | `state/seen.tsv` | 去重台账：已收录条目的唯一键 |
 | `scripts/report-header.html` | 网页渲染用的样式模板 |
