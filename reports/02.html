@@ -200,50 +200,67 @@ h1 { font-size: 1.55em; } h2 { font-size: 1.2em; }
 <blockquote>
 <p><strong>以下为本期内容</strong>｜每月 29 号更新</p>
 </blockquote>
+<p>本期收录 <strong>20 条</strong>：12 个可直接安装的 AI Skill、7
+套技能仓库与工具，另附 1 条不推荐。</p>
+<blockquote>
+<p>星数与最近推送时间均于 2026-10-29 通过 GitHub API
+现查，未采信目录站缓存。</p>
+</blockquote>
 <h3 id="ai-skill">AI Skill</h3>
 <p>1、<a href="https://github.com/alchaincyf/huashu-design">huashu-design</a>：把一句话变成可交付的设计成品。它面向网页、App
 原型、可编辑 PPTX、发布动画与信息图五类产出，内置 84
 种带样张的风格库，先给六个候选方向再挑三个深化；喂进
 logo、色板与界面截图后，成品按品牌规范排布。适合没有设计资源、又要对外交付视觉材料的场景。★27,965
-｜ HTML ｜ 推送 2026-10-23 2、<a href="https://github.com/OthmanAdi/planning-with-files">planning-with-files</a>：把长任务的计划写进文件，而不是留在上下文里。计划以
+｜ HTML ｜ 推送 2026-10-23</p>
+<p>2、<a href="https://github.com/OthmanAdi/planning-with-files">planning-with-files</a>：把长任务的计划写进文件，而不是留在上下文里。计划以
 Markdown 落盘，每轮重新注入，因此 <code>/clear</code>
 或上下文压缩之后仍能接着做，末尾还有一个确定性的完成判定，避免代理把「看起来做完了」当成做完。思路取自
 Manus 的文件式规划，可从 npm、Claude Code 插件市场或
 <code>npx skills</code> 安装，支持 60 多种代理。★27,738 ｜ Python ｜
-推送 2026-10-28 3、<a href="https://github.com/czlonkowski/n8n-skills">n8n-skills</a>：让代理直接产出可导入的
+推送 2026-10-28</p>
+<p>3、<a href="https://github.com/czlonkowski/n8n-skills">n8n-skills</a>：让代理直接产出可导入的
 n8n 工作流。技能覆盖触发器选择、错误处理与表达式语法，要求交出节点 JSON
 而不是伪代码，粘进 n8n
 就能跑。适合把重复的自动化流程一次性交给代理起草，再人工微调。★6,545 ｜
-Shell ｜ 推送 2026-10-24 4、<a href="https://github.com/twostraws/SwiftUI-Agent-Skill">SwiftUI-Agent-Skill</a>：SwiftUI
+Shell ｜ 推送 2026-10-24</p>
+<p>4、<a href="https://github.com/twostraws/SwiftUI-Agent-Skill">SwiftUI-Agent-Skill</a>：SwiftUI
 的写法规范，作者是 Swift 教程作者 Paul
 Hudson。内容讲视图组合、状态管理、布局与动画的惯用做法，目的是减少「能编译但不符合
 SwiftUI 习惯」的代码，而不是教语法。适用于用 Claude Code 或 Codex 写
-iOS/macOS 界面的场景。★6,390 ｜ — ｜ 推送 2026-10-26 5、<a href="https://github.com/danyuchn/asd-ste100-skill">asd-ste100-skill</a>：把航空维修业的技术写作标准
+iOS/macOS 界面的场景。★6,390 ｜ — ｜ 推送 2026-10-26</p>
+<p>5、<a href="https://github.com/danyuchn/asd-ste100-skill">asd-ste100-skill</a>：把航空维修业的技术写作标准
 ASD-STE100
 做成技能。它按规则改写歧义句、拆分长句、统一术语，每条改动都能对回规范，因此结果有依据而不是凭语感。适合撰写
 API 文档、错误信息与操作指令这类需要确定性表达的文本。★5,761 ｜ Python
-｜ 推送 2026-10-26 6、<a href="https://github.com/PenglongHuang/chinese-novelist-skill">chinese-novelist-skill</a>：中文长篇小说生成技能，一次可产出
+｜ 推送 2026-10-26</p>
+<p>6、<a href="https://github.com/PenglongHuang/chinese-novelist-skill">chinese-novelist-skill</a>：中文长篇小说生成技能，一次可产出
 10–50
 章。它用三层问答先锁定人物与世界观，再靠创作记忆与悬念钩子维持连载一致性，成稿后自动校验设定冲突。适合网文连载、短篇集与剧本大纲这类需要长期保持设定的写作。★4,453
-｜ JavaScript ｜ 推送 2026-10-28 7、<a href="https://github.com/Oldcircle/geo-sleuth">geo-sleuth</a>：从一张照片推断拍摄地点，并且把推断过程摊开。它综合
+｜ JavaScript ｜ 推送 2026-10-28</p>
+<p>7、<a href="https://github.com/Oldcircle/geo-sleuth">geo-sleuth</a>：从一张照片推断拍摄地点，并且把推断过程摊开。它综合
 OpenStreetMap
 几何、地形天际线、卫星影像与街景，逐步给出可复核的线索，而不是直接丢一个地名。兼容
 Claude Code、Codex、Cursor、Gemini CLI 等客户端。★4,426 ｜ Python ｜
-推送 2026-10-23 8、<a href="https://github.com/kajisho5/ffmpeg-skill">ffmpeg-skill</a>：给编码代理用的本地视频工具箱，把
+推送 2026-10-23</p>
+<p>8、<a href="https://github.com/kajisho5/ffmpeg-skill">ffmpeg-skill</a>：给编码代理用的本地视频工具箱，把
 42 个 FFmpeg 操作包装成有明确调用契约的工具，另配一个 MCP
 服务端。剪切、字幕、改画幅、响度标准化与各平台导出规格都在里面，全程本地处理，不需要云服务与
-API key。★3,541 ｜ Python ｜ 推送 2026-10-28 9、<a href="https://github.com/lennney/stop-that-shit">stop-that-shit</a>：拦截编码代理「加戏」的
+API key。★3,541 ｜ Python ｜ 推送 2026-10-28</p>
+<p>9、<a href="https://github.com/lennney/stop-that-shit">stop-that-shit</a>：拦截编码代理「加戏」的
 Hook。它挂在会话事件上，发现无人要求的哈希与校验和、顺手扩大任务范围、擅自修改无关文件时直接阻断，而不是事后提醒。面向
 Codex/GPT 工作流设计，同时提供多平台实现。★3,301 ｜ JavaScript ｜ 推送
-2026-10-27 10、<a href="https://github.com/aklofas/kicad-happy">kicad-happy</a>：KiCad
+2026-10-27</p>
+<p>10、<a href="https://github.com/aklofas/kicad-happy">kicad-happy</a>：KiCad
 电路设计的技能包。它能读原理图、审 PCB 布局、做 EMC 预合规检查与 SPICE
 仿真，还能查数据手册、找元件、整理出可用于打样的文件。适合改板与接手老项目时，先让代理把设计过一遍。★1,529
-｜ Python ｜ 推送 2026-10-27 11、<a href="https://github.com/conorluddy/ios-simulator-skill">ios-simulator-skill</a>：让代理自己操作
+｜ Python ｜ 推送 2026-10-27</p>
+<p>11、<a href="https://github.com/conorluddy/ios-simulator-skill">ios-simulator-skill</a>：让代理自己操作
 iOS
 模拟器。安装、启动、点击、输入、截图与读取界面状态都在技能范围内，<code>xcodebuild</code>
 的输出会被压缩成精简结果以省 token。适合做 UI
 自动化验证，或改完代码后让代理自己点一遍。★1,302 ｜ Python ｜ 推送
-2026-10-19 12、<a href="https://github.com/duyunzhoudyz/gongwen-skills">gongwen-skills</a>：中文公文写作技能，覆盖
+2026-10-19</p>
+<p>12、<a href="https://github.com/duyunzhoudyz/gongwen-skills">gongwen-skills</a>：中文公文写作技能，覆盖
 22 种文书类型。它按 GB/T 9704
 的版式与机关语境约束输出，缺数据时标【待补】而不是编，篇幅按给定字数控制、不注水，另附一份涉密信息不得进联网工具的提示。面向机关事业单位、医院、高校与国企的文字工作。采用
 PolyForm 非商用许可，商用前需看清条款。★123 ｜ Python ｜ 推送
@@ -253,26 +270,32 @@ PolyForm 非商用许可，商用前需看清条款。★123 ｜ Python ｜ 推�
 分别对应搜索、安装、检查与更新，后端接 skills.sh 市场，并实现 75
 种以上编码代理的识别与安装适配，把「装技能」变成一行可写进脚本的命令。风险扫描把它标为
 high：安装过程会从外部来源下载并执行技能，含遥测上报，缺少强制人工确认环节。★37,033
-｜ TypeScript ｜ 推送 2026-10-29 14、<a href="https://github.com/openai/skills">openai/skills</a>：OpenAI 官方的
+｜ TypeScript ｜ 推送 2026-10-29</p>
+<p>14、<a href="https://github.com/openai/skills">openai/skills</a>：OpenAI 官方的
 Codex 技能目录。仓库用 Markdown 与 YAML
 定义技能结构、触发条件与安装方式，内容以规范与参考材料为主，安装需要手工操作。想按官方格式写自己的技能，或想知道「一个合规技能长什么样」，可以直接拿它当范本。★28,369
-｜ Python ｜ 推送 2026-10-28 15、<a href="https://github.com/titanwings/distilly">distilly</a>：把某个人的判断方式蒸馏成任何代理都能加载的技能包，原名「同事
+｜ Python ｜ 推送 2026-10-28</p>
+<p>15、<a href="https://github.com/titanwings/distilly">distilly</a>：把某个人的判断方式蒸馏成任何代理都能加载的技能包，原名「同事
 Skill」。它要解决的是「人走了经验也走了」——产出是可移植的技能目录，而不是一份访谈记录。人格分析与技能合成之间没有审批环节，风险扫描标为中风险，涉及仓库内脚本执行时需要留意。★26,144
-｜ Python ｜ 推送 2026-10-13 16、<a href="https://github.com/google/skills">google/skills</a>：谷歌官方的
+｜ Python ｜ 推送 2026-10-13</p>
+<p>16、<a href="https://github.com/google/skills">google/skills</a>：谷歌官方的
 Agent Skills 仓库，把 Gemini、Vertex AI、BigQuery 与 Google Cloud
 的操作规范写成 SKILL.md。仓库同时带 shell 与 Python 脚本，用于配置
 gcloud CLI
 与校验环境，装完能按官方推荐路径调用，而不是让模型凭训练记忆猜参数。风险扫描标为中风险：脚本会执行系统命令并调用云
-API，没有显式的执行确认环节。★21,644 ｜ Python ｜ 推送 2026-10-28 17、<a href="https://github.com/iflytek/skillhub">iflytek/skillhub</a>：可自托管的企业级技能注册中心。它支持技能包发布与版本化，用
+API，没有显式的执行确认环节。★21,644 ｜ Python ｜ 推送 2026-10-28</p>
+<p>17、<a href="https://github.com/iflytek/skillhub">iflytek/skillhub</a>：可自托管的企业级技能注册中心。它支持技能包发布与版本化，用
 RBAC 与审计日志回答「谁能装什么」，可用 Docker 或 Kubernetes
 部署。适合组织内部统一管理技能来源与权限，而不是让每个人各装一套。★5,320
-｜ Java ｜ 推送 2026-10-28 18、<a href="https://github.com/cisco-ai-defense/skill-scanner">cisco-ai-defense/skill-scanner</a>：Cisco
+｜ Java ｜ 推送 2026-10-28</p>
+<p>18、<a href="https://github.com/cisco-ai-defense/skill-scanner">cisco-ai-defense/skill-scanner</a>：Cisco
 AI Defense
 出的技能安全扫描器，查的是提示注入、数据外泄与恶意代码模式。检测分几层：YAML
 与 YARA-X 规则、AST 与数据流分析、可选的 LLM 判定，再加一层把结论收敛成
 pass/fail 的规则层；支持 SARIF 输出，能直接进 CI 与
 pre-commit。装第三方技能前跑一遍，比人工翻文件靠谱，官方也明确写了「扫不出问题不等于没问题」。★2,660
-｜ Python ｜ 推送 2026-10-26 19、<a href="https://github.com/alibaba/skill-up">alibaba/skill-up</a>：技能的评测与演进工具，回答「装上到底有没有用」。它衡量技能对任务完成质量的实际影响，并支持按评测结果迭代版本，把技能当成需要回归测试的软件产物。Go
+｜ Python ｜ 推送 2026-10-26</p>
+<p>19、<a href="https://github.com/alibaba/skill-up">alibaba/skill-up</a>：技能的评测与演进工具，回答「装上到底有没有用」。它衡量技能对任务完成质量的实际影响，并支持按评测结果迭代版本，把技能当成需要回归测试的软件产物。Go
 实现，Apache-2.0。★1,386 ｜ Go ｜ 推送 2026-10-28</p>
 <h3 id="一条不推荐的">一条不推荐的</h3>
 <p>20、<a href="https://github.com/MavCui/Agent-Skills-Hunter">Agent-Skills-Hunter</a>：号称「终极集合地」，一次性打包
