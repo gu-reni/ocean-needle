@@ -1,7 +1,7 @@
 <p align="center">
   <b>Ocean Needle</b>
   <br>
-  <a href="README.md">中文</a> | English | <a href="README_ja.md">日本語</a>
+  <a href="README.md">中文</a> | English
   <br>
   Sifting genuinely useful AI Skills out of the open internet.
   <br>
@@ -27,6 +27,7 @@ It draws on GitHub, dedicated Skill directories, Chinese AI communities and indu
 | :card_index: | :jack_o_lantern: | :beer: | :fish_cake: | :octocat: |
 | ------- | ----- | ------------ | ------ | --------- |
 | [Issue 01](/reports/en/01.md) | | | | |
+| [Issue 02](/reports/en/02.md) | | | | |
 
 > Click an issue number for the Markdown source. To read it in a browser, change the `.md` suffix to `.html`.
 >
@@ -57,7 +58,7 @@ Three criteria, all of them required:
 
 | Path | Description |
 |---|---|
-| `README.md` / `README_en.md` / `README_ja.md` | Chinese / English / Japanese documentation |
+| `README.md` / `README_en.md` | Chinese / English documentation |
 | `reports/NN.md` | Issue NN, Chinese (Markdown source) |
 | `reports/NN.html` | Issue NN, Chinese (rendered web page) |
 | `reports/en/NN.md` | Issue NN, English (Markdown source) |
