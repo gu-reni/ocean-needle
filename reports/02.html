@@ -244,9 +244,10 @@ iOS
 的输出会被压缩成精简结果以省 token。适合做 UI
 自动化验证，或改完代码后让代理自己点一遍。★1,302 ｜ Python ｜ 推送
 2026-10-19 12、<a href="https://github.com/duyunzhoudyz/gongwen-skills">gongwen-skills</a>：中文公文写作技能，覆盖
-22
-种文书类型。它按国标格式与机关语境约束输出，并明确要求不编造事实、守住保密边界，做法偏向删冗余而不是堆字数。面向机关事业单位、医院、高校与国企的日常行文。★123
-｜ Python ｜ 推送 2026-10-22</p>
+22 种文书类型。它按 GB/T 9704
+的版式与机关语境约束输出，缺数据时标【待补】而不是编，篇幅按给定字数控制、不注水，另附一份涉密信息不得进联网工具的提示。面向机关事业单位、医院、高校与国企的文字工作。采用
+PolyForm 非商用许可，商用前需看清条款。★123 ｜ Python ｜ 推送
+2026-10-22</p>
 <h3 id="skill-仓库与工具">Skill 仓库与工具</h3>
 <p>13、<a href="https://github.com/vercel-labs/skills">vercel-labs/skills</a>：技能生态的入口级命令行工具。<code>npx skills find/add/check/update</code>
 分别对应搜索、安装、检查与更新，后端接 skills.sh 市场，并实现 75
@@ -267,7 +268,10 @@ RBAC 与审计日志回答「谁能装什么」，可用 Docker 或 Kubernetes
 部署。适合组织内部统一管理技能来源与权限，而不是让每个人各装一套。★5,320
 ｜ Java ｜ 推送 2026-10-28 18、<a href="https://github.com/cisco-ai-defense/skill-scanner">cisco-ai-defense/skill-scanner</a>：Cisco
 AI Defense
-出的技能安全扫描器。它静态检查技能包里的脚本、外部命令、网络访问与凭据读取，给出风险结论，装第三方技能前先跑一遍。技能来源分散在各类目录站时，这类专用工具比人工翻文件可靠。★2,660
+出的技能安全扫描器，查的是提示注入、数据外泄与恶意代码模式。检测分几层：YAML
+与 YARA-X 规则、AST 与数据流分析、可选的 LLM 判定，再加一层把结论收敛成
+pass/fail 的规则层；支持 SARIF 输出，能直接进 CI 与
+pre-commit。装第三方技能前跑一遍，比人工翻文件靠谱，官方也明确写了「扫不出问题不等于没问题」。★2,660
 ｜ Python ｜ 推送 2026-10-26 19、<a href="https://github.com/alibaba/skill-up">alibaba/skill-up</a>：技能的评测与演进工具，回答「装上到底有没有用」。它衡量技能对任务完成质量的实际影响，并支持按评测结果迭代版本，把技能当成需要回归测试的软件产物。Go
 实现，Apache-2.0。★1,386 ｜ Go ｜ 推送 2026-10-28</p>
 <h3 id="一条不推荐的">一条不推荐的</h3>
